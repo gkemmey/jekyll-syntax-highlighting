@@ -26,7 +26,7 @@
   "license": "MIT",
   "name": "jekyll-syntax-highlighting",
   "optionalDependencies": {},
-  "readme": "# jekyll-syntax-highlighting package\n\nThis package adds syntax highlighting for jekyll stlye code blocks like `{% highlight ruby %}` when using the core `language-gfm` package.",
+  "readme": "# jekyll-syntax-highlighting package\n\nThis package adds syntax highlighting for jekyll stlye code blocks like `{% highlight ruby %}` when using the core `language-gfm` package.\n\nExample:\n\n![example](https://cloud.githubusercontent.com/assets/1423258/19329618/b3dc30b0-90a7-11e6-9035-1b57eb6bab11.png)\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
