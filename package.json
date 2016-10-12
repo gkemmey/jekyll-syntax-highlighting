@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "Gray Kemmey",
+    "email": "gray.kemmey@gmail.com",
+    "url": "https://github.com/gkemmey"
+  },
+  "bugs": {
+    "url": "https://github.com/gkemmey/jekyll-syntax-highlighting/issues"
+  },
+  "contributors": [],
+  "dependencies": {},
+  "description": "Adds syntax highlighting for Jekyll code blocks.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/gkemmey/jekyll-syntax-highlighting#readme",
+  "keywords": [
+    "language",
+    "jekyll",
+    "syntax",
+    "highlight",
+    "markdown",
+    "gfm"
+  ],
+  "license": "MIT",
+  "name": "jekyll-syntax-highlighting",
+  "optionalDependencies": {},
+  "readme": "# jekyll-syntax-highlighting package\n\nThis package adds syntax highlighting for jekyll stlye code blocks like `{% highlight ruby %}` when using the core `language-gfm` package.",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkemmey/jekyll-syntax-highlighting.git"
+  },
+  "version": "0.1.0"
+}

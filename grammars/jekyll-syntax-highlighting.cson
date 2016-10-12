@@ -1,0 +1,691 @@
+'scopeName': 'text.jekyll'
+'name': 'jekyll-syntax-highlighting'
+'injectionSelector': 'source.gfm'
+'patterns': [
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(javascript|js))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.js.gfm'
+    'contentName': 'source.embedded.js'
+    'patterns': [
+      {
+        'include': 'source.js'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(typescript|ts))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.ts.gfm'
+    'contentName': 'source.embedded.ts'
+    'patterns': [
+      {
+        'include': 'source.ts'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(markdown|mdown|md))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.gfm'
+    'contentName': 'text.embedded.md'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(json))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.json.gfm'
+    'contentName': 'source.embedded.json'
+    'patterns': [
+      {
+        'include': 'source.json'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(css))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.css.gfm'
+    'contentName': 'source.embedded.css'
+    'patterns': [
+      {
+        'include': 'source.css'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(less))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.less.gfm'
+    'contentName': 'source.embedded.css.less'
+    'patterns': [
+      {
+        'include': 'source.css.less'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(xml))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.xml.gfm'
+    'contentName': 'text.embedded.xml'
+    'patterns': [
+      {
+        'include': 'text.xml'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(ruby|rb))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.ruby.gfm'
+    'contentName': 'source.embedded.ruby'
+    'patterns': [
+      {
+        'include': 'source.ruby'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(rust|rs))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.rust.gfm'
+    'contentName': 'source.embedded.rust'
+    'patterns': [
+      {
+        'include': 'source.rust'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(java))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.java.gfm'
+    'contentName': 'source.embedded.java'
+    'patterns': [
+      {
+        'include': 'source.java'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(scala|sbt))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.scala.gfm'
+    'contentName': 'source.embedded.scala'
+    'patterns': [
+      {
+        'include': 'source.scala'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(erlang))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.erlang.gfm'
+    'contentName': 'source.embedded.erlang'
+    'patterns': [
+      {
+        'include': 'source.erlang'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(go(lang)?))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.go.gfm'
+    'contentName': 'source.embedded.go'
+    'patterns': [
+      {
+        'include': 'source.go'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(cs(harp)?))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.cs.gfm'
+    'contentName': 'source.embedded.cs'
+    'patterns': [
+      {
+        'include': 'source.cs'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(php))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.php.gfm'
+    'contentName': 'source.embedded.php'
+    'patterns': [
+      {
+        'include': 'source.php'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(sh|bash|shell))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.shell.gfm'
+    'contentName': 'source.embedded.shell'
+    'patterns': [
+      {
+        'include': 'source.shell'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(py(thon)?))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.python.gfm'
+    'contentName': 'source.embedded.python'
+    'patterns': [
+      {
+        'include': 'source.python'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(pycon))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.python.console.gfm'
+    'contentName': 'source.embedded.python.console'
+    'patterns': [
+      {
+        'include': 'text.python.console'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(c))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.c.gfm'
+    'contentName': 'source.embedded.c'
+    'patterns': [
+      {
+        'include': 'source.c'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(c(pp|\\+\\+)))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.cpp.gfm'
+    'contentName': 'source.embedded.cpp'
+    'patterns': [
+      {
+        'include': 'source.cpp'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(objc|objective-c))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.objc.gfm'
+    'contentName': 'source.embedded.objc'
+    'patterns': [
+      {
+        'include': 'source.objc'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(adoc|asciidoc|asciidoctor|asc|))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.asciidoc.gfm'
+    'contentName': 'source.embedded.asciidoc'
+    'patterns': [
+      {
+        'include': 'source.asciidoc'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(swift))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.swift.gfm'
+    'contentName': 'source.embedded.swift'
+    'patterns': [
+      {
+        'include': 'source.swift'
+      }
+    ]
+  }
+
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(dockerfile|docker))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.dockerfile.gfm'
+    'contentName': 'source.embedded.dockerfile'
+    'patterns': [
+      {
+        'include': 'source.dockerfile'
+      }
+    ]
+  }
+
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(makefile|make))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.makefile.gfm'
+    'contentName': 'source.embedded.makefile'
+    'patterns': [
+      {
+        'include': 'source.makefile'
+      }
+    ]
+  }
+
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(perl))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.perl.gfm'
+    'contentName': 'source.embedded.perl'
+    'patterns': [
+      {
+        'include': 'source.perl'
+      }
+    ]
+  }
+
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(perl6))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.perl6.gfm'
+    'contentName': 'source.embedded.perl6'
+    'patterns': [
+      {
+        'include': 'source.perl6'
+      }
+    ]
+  }
+
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(toml))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.toml.gfm'
+    'contentName': 'source.embedded.toml'
+    'patterns': [
+      {
+        'include': 'source.toml'
+      }
+    ]
+  }
+
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(html))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.html.gfm'
+    'contentName': 'text.embedded.html.basic'
+    'patterns': [
+      {
+        'include': 'text.html.basic'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(ya?ml))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.yaml.gfm'
+    'contentName': 'source.embedded.yaml'
+    'patterns': [
+      {
+        'include': 'source.yaml'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(elixir))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.elixir.gfm'
+    'contentName': 'source.embedded.elixir'
+    'patterns': [
+      {
+        'include': 'source.elixir'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(diff|patch|rej))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.diff.gfm'
+    'contentName': 'source.embedded.diff'
+    'patterns': [
+      {
+        'include': 'source.diff'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(julia))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.julia.gfm'
+    'contentName': 'source.embedded.julia'
+    'patterns': [
+      {
+        'include': 'source.julia'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*([\\{]{0,1})(?i:(r))([^\\}]*)([\\}]{0,1})(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.r.gfm'
+    'contentName': 'source.embedded.r'
+    'patterns': [
+      {
+        'include': 'source.r'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(haskell))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.haskell.gfm'
+    'contentName': 'source.embedded.haskell'
+    'patterns': [
+      {
+        'include': 'source.haskell'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(elm))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.elm.gfm'
+    'contentName': 'source.embedded.elm'
+    'patterns': [
+      {
+        'include': 'source.elm'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(apib|apiblueprint))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.gfm'
+    'contentName': 'text.embedded.html.markdown.source.gfm.apib'
+    'patterns': [
+      {
+        'include': 'text.html.markdown.source.gfm.apib'
+      }
+    ]
+  }
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(mson))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.gfm'
+    'contentName': 'text.embedded.html.markdown.source.gfm.mson'
+    'patterns': [
+      {
+        'include': 'text.html.markdown.source.gfm.mson'
+      }
+    ]
+  },
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(sql))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.sql.gfm'
+    'contentName': 'source.embedded.sql'
+    'patterns': [
+      {
+        'include': 'source.sql'
+      }
+    ]
+  },
+  {
+    'begin': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*highlight(?:(?!\\n)\\s)*(?i:(clojure))(?:(?!\\n)\\s)*%\\}$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^(?:(?!\\n)\\s)*\\{%(?:(?!\\n)\\s)*endhighlight(?:(?!\\n)\\s)*(?:(?!\\n)\\s)*%\\}$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.clojure.gfm'
+    'contentName': 'source.embedded.clojure'
+    'patterns': [
+      {
+        'include': 'source.clojure'
+      }
+    ]
+  }
+]
