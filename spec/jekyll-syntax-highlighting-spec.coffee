@@ -24,6 +24,13 @@ describe "loads jekyll-syntax-highlighting grammar", ->
     expect(tokens[0]).toEqual value: "{% highlight ruby %}", scopes: ["text.jekyll", "markup.code.ruby.gfm", "support.gfm"]
     expect(ruleStack[1].contentScopeName).toBe "source.embedded.ruby"
 
+  it "tokenizes an embedded php block", ->
+    {tokens, ruleStack} = grammar.tokenizeLine("{% highlight php %}")
+    expect(tokens[0]).toEqual value: "{% highlight php %}", scopes: ["text.jekyll", "markup.code.php.gfm", "support.gfm"]
+
+    {tokens, ruleStack} = grammar.tokenizeLine("<?php", ruleStack)
+    expect(tokens[0]).toEqual value: "<?php", scopes: ["text.jekyll", "markup.code.php.gfm", "source.embedded.php"]
+
   it "tokenizes the endhighlight", ->
     {tokens, ruleStack} = grammar.tokenizeLine("{% highlight js %}")
     {tokens, ruleStack} = grammar.tokenizeLine("console.log('nothing to see here');", ruleStack)

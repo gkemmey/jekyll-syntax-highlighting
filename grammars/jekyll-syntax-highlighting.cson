@@ -253,7 +253,7 @@
     'contentName': 'source.embedded.php'
     'patterns': [
       {
-        'include': 'source.php'
+        'include': 'text.html.php'
       }
     ]
   }
